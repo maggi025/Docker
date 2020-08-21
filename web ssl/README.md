@@ -5,11 +5,18 @@ Contiene la configuración que levanta los contenedores de nginx-duckdns-ssl
   
   `
     volumes:
+    
       - directorio donde esta el index.html:/usr/share/nginx/html:ro
+      
+      
     environment:
+    
       - VIRTUAL_HOST=tuhost.duckdns.org
+      
       - LETSENCRYPT_HOST=tuhost.duckdns.org
+      
       - LETSENCRYPT_EMAIL=tumail@prueba.com
+      
   `
 
 
@@ -18,9 +25,13 @@ Contiene la configuración que levanta los contenedores de nginx-duckdns-ssl
 
 `
     environment:
+    
       - TZ=America/Argentina/Buenos aires
+      
       - SUBDOMAINS=tusubdominio
+      
       - TOKEN=11111111111111111
+      
 `
 
 
