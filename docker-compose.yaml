@@ -6,8 +6,8 @@ services:
     container_name: duckdns
     environment:
       - TZ=America/Argentina/Buenos aires
-      - SUBDOMAINS=martinmaggi
-      - TOKEN=739f90eb-5f86-4698-8a74-465bfedba5b9
+      - SUBDOMAINS=tusubdominio
+      - TOKEN=11111111111111111
     restart: always
 
 
@@ -42,11 +42,11 @@ services:
     expose:
       - "80"
     volumes:
-      - M:\Docker\www:/usr/share/nginx/html:ro
+      - directorio donde esta el index:/usr/share/nginx/html:ro
     environment:
-      - VIRTUAL_HOST=martinmaggi.duckdns.org
-      - LETSENCRYPT_HOST=martinmaggi.duckdns.org
-      - LETSENCRYPT_EMAIL=maggi.ok@live.com.ar
+      - VIRTUAL_HOST=tuhost.duckdns.org
+      - LETSENCRYPT_HOST=tuhost.duckdns.org
+      - LETSENCRYPT_EMAIL=tumail@prueba.com
 volumes: 
   certs:
   html:
