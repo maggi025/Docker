@@ -3,8 +3,8 @@
 Contiene la configuración que levanta los contenedores de nginx-duckdns-ssl
 -Uso nginx y nginx-proxy para el funcionamiento web. En nginx hace falta modificar estas lineas con tu información para que funcione
   
-  
-  `  volumes:
+  ```
+  volumes:
     
       - directorio donde esta el index.html:/usr/share/nginx/html:ro
      
@@ -13,20 +13,20 @@ Contiene la configuración que levanta los contenedores de nginx-duckdns-ssl
       - VIRTUAL_HOST=tuhost.duckdns.org
       - LETSENCRYPT_HOST=tuhost.duckdns.org
       - LETSENCRYPT_EMAIL=tumail@prueba.com
-  `
+ ```
       
 
 
 -Uso duckdns ya que tengo configurado un dominio ahí y el servicio mantiene actualizada la ip pública para que siempre pueda estar activa la página
   En este módulo hay que configurar estas lineas:
 
-
-`    environment:
+```
+    environment:
     
       - TZ=America/Argentina/Buenos aires
       - SUBDOMAINS=tusubdominio
       - TOKEN=11111111111111111
-`
+```
        
 
 
